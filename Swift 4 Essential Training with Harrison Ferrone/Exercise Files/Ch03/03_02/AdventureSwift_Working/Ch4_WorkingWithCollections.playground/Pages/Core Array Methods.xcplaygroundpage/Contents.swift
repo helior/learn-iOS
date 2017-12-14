@@ -14,13 +14,27 @@
  + Use chained **subscript syntax** to access a value in **skillTree**
  */
 // Changing & appending items
+var characterClasses = ["Ranger", "Paladin", "Droid"]
+characterClasses[1] = "Knight"
+characterClasses.append("Gunslinger")
+characterClasses += ["Healer", "Berserker"]
 
 //Inserting and removing items
+characterClasses.insert("Beast Master", at: 2)
+characterClasses.remove(at: 1)
 
 // Other methods
+characterClasses.reverse()
+characterClasses.contains("Gunslinger")
 
 // Nested arrays and subscripts
+var skillTree: [[String]] = [
+    ["Attack+", "Barrage", "Heavy Hitter"],
+    ["Guard+", "Evasion", "Run Like Hell"]
+]
+var attackTreeSkill = skillTree[0][2]
 
+print(characterClasses)
 /*:
  [Previous Topic](@previous)
  

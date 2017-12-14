@@ -12,16 +12,16 @@
  + Explore some of the common string class methods 
  */
 // Declaring strings
-
+var characterName = "Helior"
 
 // Concatenation
-
+var fullCharacterName = characterName + " Colorado"
 
 // String interpolation
-
+var characterDescription = "\(fullCharacterName) is a person"
 
 // Common class methods
-
+characterDescription.append("!")
 /*:
  [Previous Topic](@previous)
  

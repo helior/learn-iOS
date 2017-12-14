@@ -11,13 +11,16 @@
  + Add different number types together with and without type annotations
  */
 // Test variables
-
+var goldCarried = 5.43
 
 // Explicit conversions
+var goldCarriedInt = Int(goldCarried)
+var goldCarriedString = String(goldCarried)
 
 
 // Inferred conversion with operators
-
+var goldResult_implicit = 37 + 2.55
+var goldResult_explicit = goldCarried + Double(goldCarriedInt)
 /*:
  [Previous Topic](@previous)
  

@@ -14,6 +14,9 @@
 
 
 // Bang operator (toggle)
+var characterIsRunning:Bool = false
+characterIsRunning = !characterIsRunning
+
 
 /*:
  [Previous Topic](@previous)

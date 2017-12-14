@@ -12,18 +12,28 @@
  8. Use the `append` method on **playerString** to interpolate the **isAlive** variable in some way
  */
 // 1
+var characterName = "", characterClass = ""
 
 // 2
+characterName += "Colorado"
 
 // 3
+var hpPercentDouble:Double = 75.53
 
 // 4
+var hpPercentIn:Int = Int(hpPercentDouble)
 
 // 5
+var playerString:String = ""
+playerString.append("Age: 33;")
+playerString.append("Gender: Male;")
 
 // 6
+print(playerString)
 
 // 7
+var isAlive = true
 
 // 8
+playerString.append("IS ALIVE: \(isAlive)")
 //: [Previous Topic](@previous)
