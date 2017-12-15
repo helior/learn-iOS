@@ -13,11 +13,20 @@
  + Use chained subcripts to access a nested key-value pair
  */
 // Adding & updating key-value pairs
-
+var playerStats: [String:Int] = ["HP":100, "Attack": 35, "Gold": 29]
+playerStats["Defense"] = 24
+playerStats["HP"] = 95
+playerStats.updateValue(3, forKey: "GuildMembers")
 // Removing key-value pairs
-
+playerStats.removeValue(forKey: "Defense")
 // Nested dictionaries
-
+var multiDimentionalDictionary = [
+    "set1": ["one": 1, "two": 2, "three": 3],
+    "set2": ["four": 4, "five": 5, "six": 6]
+]
+var element = multiDimentionalDictionary["set1"]?["three"]
+print(playerStats)
+print(element)
 /*:
  [Previous Topic](@previous)
  
