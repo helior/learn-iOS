@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3F8DC42D1FCE1D2700CC30C5"
-               BuildableName = "CameraFramework.framework"
-               BlueprintName = "CameraFramework"
-               ReferencedContainer = "container:CameraFramework.xcodeproj">
+               BlueprintIdentifier = "3F8DC4411FCE210600CC30C5"
+               BuildableName = "SampleApplication.app"
+               BlueprintName = "SampleApplication"
+               ReferencedContainer = "container:SampleApplication.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -30,6 +30,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3F8DC4411FCE210600CC30C5"
+            BuildableName = "SampleApplication.app"
+            BlueprintName = "SampleApplication"
+            ReferencedContainer = "container:SampleApplication.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -44,15 +53,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3F8DC42D1FCE1D2700CC30C5"
-            BuildableName = "CameraFramework.framework"
-            BlueprintName = "CameraFramework"
-            ReferencedContainer = "container:CameraFramework.xcodeproj">
+            BlueprintIdentifier = "3F8DC4411FCE210600CC30C5"
+            BuildableName = "SampleApplication.app"
+            BlueprintName = "SampleApplication"
+            ReferencedContainer = "container:SampleApplication.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -62,15 +72,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3F8DC42D1FCE1D2700CC30C5"
-            BuildableName = "CameraFramework.framework"
-            BlueprintName = "CameraFramework"
-            ReferencedContainer = "container:CameraFramework.xcodeproj">
+            BlueprintIdentifier = "3F8DC4411FCE210600CC30C5"
+            BuildableName = "SampleApplication.app"
+            BlueprintName = "SampleApplication"
+            ReferencedContainer = "container:SampleApplication.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
