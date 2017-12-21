@@ -12,6 +12,7 @@ import AVFoundation
 public protocol CameraControllerDelegate {
     func cancelButtonTapped(controller:CameraViewController)
 }
+
 public enum CameraPosition {
     case front
     case back
@@ -31,6 +32,7 @@ public final class CameraViewController: UIViewController {
         _cancelButton = button
         return button
     }
+    
     open var delegate:CameraControllerDelegate?
     
     open var position:CameraPosition = .back {
@@ -59,6 +61,12 @@ public final class CameraViewController: UIViewController {
         createUI()
         camera.update()
     }
+    
+    public override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        updateUI(orientation: UIApplication.shared.statusBarOrientation)
+        updateButtonFrames()
+    }
 }
 
 // MARK: User Interface Creation
@@ -73,6 +81,34 @@ fileprivate extension CameraViewController {
         self.previewLayer = previewLayer
         self.view.layer.addSublayer(previewLayer)
         self.view.addSubview(self.cancelButton)
+    }
+    
+    func updateUI(orientation:UIInterfaceOrientation) {
+        guard let previewLayer = self.previewLayer, let connection = previewLayer.connection else {
+            return
+        }
+        previewLayer.frame = self.view.bounds
+        switch orientation {
+        case .portrait:
+            connection.videoOrientation = .portrait
+            break
+        case .landscapeLeft:
+            connection.videoOrientation = .landscapeLeft
+            break
+        case .landscapeRight:
+            connection.videoOrientation = .landscapeRight
+            break
+        case .portraitUpsideDown:
+            connection.videoOrientation = .portraitUpsideDown
+            break
+        default:
+            connection.videoOrientation = .portrait
+            break
+        }
+    }
+    
+    func updateButtonFrames() {
+        self.cancelButton.frame = CGRect(x: self.view.frame.minX + 10, y: self.view.frame.maxY - 50, width: 70, height: 30)
     }
 }
 
