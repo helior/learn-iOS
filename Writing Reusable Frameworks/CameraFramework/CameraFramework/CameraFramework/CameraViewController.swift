@@ -11,6 +11,7 @@ import AVFoundation
 
 public protocol CameraControllerDelegate {
     func cancelButtonTapped(controller:CameraViewController)
+    func stillImageCaptured(controller:CameraViewController, image:UIImage)
 }
 
 public enum CameraPosition {
@@ -59,7 +60,7 @@ public final class CameraViewController: UIViewController {
     
     public init() {
         super.init(nibName: nil, bundle: nil)
-        let camera = Camera(with: self)
+        let camera = Camera()
         camera.delegate = self
         self.camera = camera
     }
@@ -93,6 +94,7 @@ fileprivate extension CameraViewController {
         guard let previewLayer = camera.getPreviewLayer() else {
             return
         }
+        previewLayer.frame = self.view.bounds
         self.previewLayer = previewLayer
         self.view.layer.addSublayer(previewLayer)
         self.view.addSubview(self.cancelButton)
@@ -147,7 +149,9 @@ fileprivate extension CameraViewController {
 // MARK: CameraDelegate Functions
 extension CameraViewController:CameraDelegate {
     func stillImageCaptured(camera: Camera, image: UIImage) {
-        print("camera button tapped")
+        if let delegate = self.delegate {
+            delegate.stillImageCaptured(controller: self, image: image)
+        }
     }
     
 }
