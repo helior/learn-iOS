@@ -83,6 +83,17 @@ public final class CameraViewController: UIViewController {
         updateUI(orientation: UIApplication.shared.statusBarOrientation)
         updateButtonFrames()
     }
+    
+    open class func getVersion() -> String? {
+        let bundle = Bundle(for:CameraViewController.self)
+        guard let info = bundle.infoDictionary else {
+            return nil
+        }
+        guard let versionString = info["CFBundleShortVersionString"] as? String else {
+            return nil
+        }
+        return versionString
+    }
 }
 
 // MARK: User Interface Creation
