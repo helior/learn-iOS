@@ -7,24 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F4BFA8B1FF31D18002D6129 /* CameraFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F4BFA891FF31D0E002D6129 /* CameraFramework.framework */; };
+		3F4BFA8C1FF31D18002D6129 /* CameraFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F4BFA891FF31D0E002D6129 /* CameraFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3F8DC4461FCE210600CC30C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8DC4451FCE210600CC30C5 /* AppDelegate.swift */; };
 		3F8DC4481FCE210600CC30C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8DC4471FCE210600CC30C5 /* ViewController.swift */; };
 		3F8DC44B1FCE210600CC30C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F8DC4491FCE210600CC30C5 /* Main.storyboard */; };
 		3F8DC44D1FCE210600CC30C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F8DC44C1FCE210600CC30C5 /* Assets.xcassets */; };
 		3F8DC4501FCE210600CC30C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F8DC44E1FCE210600CC30C5 /* LaunchScreen.storyboard */; };
-		3FAB5E251FE9E69E0002A521 /* CameraFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FAB5E241FE9E69E0002A521 /* CameraFramework.framework */; };
-		3FAB5E261FE9E6B50002A521 /* CameraFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FAB5E241FE9E69E0002A521 /* CameraFramework.framework */; };
-		3FAB5E271FE9E6B50002A521 /* CameraFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3FAB5E241FE9E69E0002A521 /* CameraFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3FAB5E281FE9E6B50002A521 /* Embed Frameworks */ = {
+		3F4BFA8D1FF31D18002D6129 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3FAB5E271FE9E6B50002A521 /* CameraFramework.framework in Embed Frameworks */,
+				3F4BFA8C1FF31D18002D6129 /* CameraFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -32,6 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3F4BFA891FF31D0E002D6129 /* CameraFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CameraFramework.framework; path = "../../../../../../../../../Library/Developer/Xcode/DerivedData/CameraWorkspace-gucfxkyoqmajuvehcohjzqiptgjd/Build/Products/Debug-iphoneos/CameraFramework.framework"; sourceTree = "<group>"; };
 		3F8DC4421FCE210600CC30C5 /* SampleApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F8DC4451FCE210600CC30C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F8DC4471FCE210600CC30C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,7 +39,6 @@
 		3F8DC44C1FCE210600CC30C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F8DC44F1FCE210600CC30C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F8DC4511FCE210600CC30C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3FAB5E241FE9E69E0002A521 /* CameraFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CameraFramework.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/CameraWorkspace-dhpdgiwwylkyjnaifbtmbnapjsgc/Build/Products/Debug-iphoneos/CameraFramework.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,8 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FAB5E261FE9E6B50002A521 /* CameraFramework.framework in Frameworks */,
-				3FAB5E251FE9E69E0002A521 /* CameraFramework.framework in Frameworks */,
+				3F4BFA8B1FF31D18002D6129 /* CameraFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +86,7 @@
 		3FE218111FCE248600DFA50E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3FAB5E241FE9E69E0002A521 /* CameraFramework.framework */,
+				3F4BFA891FF31D0E002D6129 /* CameraFramework.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -103,7 +101,7 @@
 				3F8DC43E1FCE210600CC30C5 /* Sources */,
 				3F8DC43F1FCE210600CC30C5 /* Frameworks */,
 				3F8DC4401FCE210600CC30C5 /* Resources */,
-				3FAB5E281FE9E6B50002A521 /* Embed Frameworks */,
+				3F4BFA8D1FF31D18002D6129 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
