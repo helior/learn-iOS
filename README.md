@@ -5,6 +5,7 @@ A repository to track my personal learning plan and track mini-projects from tut
 
 * [Swift 4 Essential Training - Harrison Ferrone](https://www.lynda.com/Swift-tutorials/Swift-4-Essential-Training/636121-2.html)
 * [Swift: Writing Reusable Frameworks - David Okun](https://www.lynda.com/Swift-tutorials/Swift-Writing-Reusable-Frameworks/636120-2.html)
+* [Advanced Auto Layout - Scott Berrevoets](https://videos.raywenderlich.com/courses/81-rwdevcon-2017-vault-tutorials/lessons/2)
 
 ### Questions & Answers
 
