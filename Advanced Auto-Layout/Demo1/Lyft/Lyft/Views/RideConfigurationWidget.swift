@@ -31,25 +31,60 @@ final class RideConfigurationWidget: NibView {
 
   @IBOutlet fileprivate var primeTimeContainer: UIView!
   @IBOutlet fileprivate var primeTimeLabel: UILabel!
+  @IBOutlet fileprivate var primeTimeWidth: NSLayoutConstraint!
+  @IBOutlet fileprivate var lastRideStopBottom: NSLayoutConstraint!
+  fileprivate lazy var rideStopViews: [RideStopView] = [self.pickupView]
 
   // MARK: - View Life Cycle
   override func awakeFromNib() {
     super.awakeFromNib()
 
     setPrimeTime(nil, animated: false)
+    
+    pickupView.onAddingRow = { [weak self] in
+      self?.addStop(withTitle: kSimulatedStops.removeFirst())
+    }
   }
 }
 
 // MARK: - Internal
 extension RideConfigurationWidget {
   func setPrimeTime(_ primeTime: String?, animated: Bool = true) {
-
+    primeTimeLabel.text = primeTime
+    primeTimeContainer.layoutIfNeeded()
+    primeTimeWidth.isActive = primeTime != nil
+    
+    UIView.animate(withDuration: animated ? 0.25 : 0, animations: layoutIfNeeded)
   }
 }
 
 // MARK: - Private
 private extension RideConfigurationWidget {
 
+  func addStop(withTitle title:String) {
+    guard let previousLastRow = self.rideStopViews.last else {
+      return
+    }
+    
+    let newRideStop = createNewStop(withTitle: title, below: previousLastRow)
+    roundedContainer.insertSubview(newRideStop, belowSubview: previousLastRow)
+    
+    let priority = lastRideStopBottom.priority
+    lastRideStopBottom = newRideStop.bottomAnchor.constraint(equalTo: roundedContainer.bottomAnchor)
+    lastRideStopBottom.priority = priority + 1
+    
+    NSLayoutConstraint.activate([
+      newRideStop.topAnchor.constraint(equalTo: previousLastRow.bottomAnchor),
+      newRideStop.leadingAnchor.constraint(equalTo: pickupView.leadingAnchor),
+      newRideStop.trailingAnchor.constraint(equalTo: pickupView.trailingAnchor),
+      newRideStop.heightAnchor.constraint(equalTo: pickupView.heightAnchor),
+      lastRideStopBottom
+    ])
+    
+    rideStopViews.append(newRideStop)
+    
+  }
+  
   func createNewStop(withTitle title: String, below previousStop: RideStopView) -> RideStopView {
     let newView = RideStopView()
     newView.address = title

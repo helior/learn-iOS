@@ -63,4 +63,5 @@ private extension RideStopView {
   @IBAction func addIconTapped() {
     onAddingRow?()
   }
+
 }
